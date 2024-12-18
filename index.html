@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking GOR LB SPORT</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>GOR LB SPORT CENTER</h1>
+    <p>Mudah, cepat, dan praktis untuk semua kebutuhan Anda.</p>
+  </header>
+
+  <main class="main">
+    <!-- Menu -->
+    <section id="menu" class="menu">
+      <div class="card" onclick="showBookingForm('Futsal')">
+        <h2>Futsal</h2>
+        <p>Pesan lapangan futsal dengan harga terbaik.</p>
+      </div>
+      <div class="card" onclick="showBookingForm('Badminton')">
+        <h2>Badminton</h2>
+        <p>Rasakan serunya bermain badminton bersama teman.</p>
+      </div>
+      <div class="card" onclick="showAllBookings()">
+        <h2>Daftar Booking</h2>
+        <p>Lihat semua pemesanan Anda di sini.</p>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking-form" class="form hidden">
+      <h2 id="form-title">Booking</h2>
+      <div class="form-group">
+        <label for="hours">Durasi (jam):</label>
+        <input type="number" id="hours" min="1" placeholder="Masukkan durasi booking">
+      </div>
+      <div class="form-buttons">
+        <button class="btn btn-primary" onclick="submitBooking()">Submit</button>
+        <button class="btn btn-secondary" onclick="goBack()">Kembali</button>
+      </div>
+    </section>
+
+    <!-- Booking List -->
+    <section id="bookings" class="bookings hidden">
+      <h2>Daftar Booking</h2>
+      <ul id="booking-list"></ul>
+      <button class="btn btn-secondary" onclick="goBack()">Kembali</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Booking Lapangan. Desain modern oleh <strong>Anda</strong>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
